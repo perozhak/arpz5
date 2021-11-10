@@ -1,5 +1,7 @@
 import React from 'react'
 import ReactSelect from 'react-select'
+import GoBack from '../../GoBack/GoBack'
+import mainClasses from '../Styles.module.scss'
 
 const resolveOptions = [
   {
@@ -82,47 +84,49 @@ const resolveOptions = [
     label: "аналіз доцільності розроблення даного ПЗ.",
     value: Math.random().toFixed(2)
   }
-]
+].map(el => ({...el, label: el.label.charAt(0).toUpperCase() + el.label.slice(1)}))
 
 const Etap3 = (props) => {
 
   return (
-    <div className="mx-3">     
-    <button type="button" className="btn btn-secondary" onClick={() => props.history.push("/")}>BACK</button>
-    <h3>Ймовірності настання ризикових подій, встановлені експертами</h3>
-    <table className="table">
-      <thead>
-      <tr className="table-secondary">
-           <th scope="row">#</th>
-           <td>{"Ризикові події"}</td>
-           <td>Рішення</td>
-         </tr>
-         </thead>
-         <tbody>
-           {props.IOR.map((item, index, arr) => 
-               item.items.map((it, idex) => 
-               <tr key={"tr" + idex}>
-                <th scope="row">{(item.id + (idex + 1)) || idex+1}</th>
-                <td>{it.itemTitle}</td>
-                <td  >
-                  <ReactSelect 
-                    value={it.resolveOption}
-                    placeholder={"Виберіть спосіб рішення"}
-                    options={resolveOptions}
-                    onChange={
-                      (value) => {
-                          let temp = props.IOR;
-                          temp[index].items[idex].resolveOption = value
-                          props.setIOR([...temp])
-                      }}
-                  />
-                </td>
-               </tr>
-             )
-             )}
-         </tbody>
-     </table>
- </div>
+    <div className={mainClasses.EtapContainer}>
+      <div className="mx-3 pb-2">   
+      <GoBack />  
+      <h3 className="mt-2">Ймовірності настання ризикових подій, встановлені експертами</h3>
+      <table className="table">
+        <thead>
+        <tr className="table-primary">
+             <th scope="row">#</th>
+             <td>{"Ризикові події"}</td>
+             <td>Рішення</td>
+           </tr>
+           </thead>
+           <tbody>
+             {props.IOR.map((item, index, arr) => 
+                 item.items.map((it, idex) => 
+                 <tr key={"tr" + idex} className="table-info">
+                  <th scope="row">{(item.id + (idex + 1)) || idex+1}</th>
+                  <td>{it.itemTitle}</td>
+                  <td style={{width: '35%'}} >
+                    <ReactSelect 
+                      value={it.resolveOption}
+                      placeholder={"Виберіть спосіб рішення"}
+                      options={resolveOptions}
+                      onChange={
+                        (value) => {
+                            let temp = props.IOR;
+                            temp[index].items[idex].resolveOption = value
+                            props.setIOR([...temp])
+                        }}
+                    />
+                  </td>
+                 </tr>
+               )
+               )}
+           </tbody>
+       </table>
+   </div>
+    </div>
   )
 }
 
