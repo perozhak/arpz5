@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/arpz5/static/css/main.c304e868.chunk.css",
+    "main.js": "/arpz5/static/js/main.9a0ae1c6.chunk.js",
+    "main.js.map": "/arpz5/static/js/main.9a0ae1c6.chunk.js.map",
+    "runtime-main.js": "/arpz5/static/js/runtime-main.1360cc15.js",
+    "runtime-main.js.map": "/arpz5/static/js/runtime-main.1360cc15.js.map",
+    "static/css/2.a75f5a2c.chunk.css": "/arpz5/static/css/2.a75f5a2c.chunk.css",
+    "static/js/2.c5a48cc2.chunk.js": "/arpz5/static/js/2.c5a48cc2.chunk.js",
+    "static/js/2.c5a48cc2.chunk.js.map": "/arpz5/static/js/2.c5a48cc2.chunk.js.map",
+    "index.html": "/arpz5/index.html",
+    "static/css/2.a75f5a2c.chunk.css.map": "/arpz5/static/css/2.a75f5a2c.chunk.css.map",
+    "static/css/main.c304e868.chunk.css.map": "/arpz5/static/css/main.c304e868.chunk.css.map",
+    "static/js/2.c5a48cc2.chunk.js.LICENSE.txt": "/arpz5/static/js/2.c5a48cc2.chunk.js.LICENSE.txt",
+    "static/media/arrow-left.ef02da42.svg": "/arpz5/static/media/arrow-left.ef02da42.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1360cc15.js",
+    "static/css/2.a75f5a2c.chunk.css",
+    "static/js/2.c5a48cc2.chunk.js",
+    "static/css/main.c304e868.chunk.css",
+    "static/js/main.9a0ae1c6.chunk.js"
+  ]
+}
