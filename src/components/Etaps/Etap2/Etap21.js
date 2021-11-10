@@ -10,7 +10,7 @@ const Etap21 = (props) => {
     <div className={mianClasses.EtapContainer}>     
        <div className="d-flex">
          <GoBack />
-         <button type="button" className="btn btn-info m-2" onClick={() => props.history.push("etap-2-2")}>Величина ризиків</button>
+         <button type="button" className="btn btn-info m-2" onClick={() => props.history.push(`${process.env.PUBLIC_URL}/etap-2-2`)}>Величина ризиків</button>
        </div>
        <h3 className="px-3">Ймовірності настання ризикових подій, встановлені експертами</h3>
       <div className="mx-3 pb-2">

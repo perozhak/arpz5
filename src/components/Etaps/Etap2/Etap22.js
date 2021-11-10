@@ -20,7 +20,7 @@ const Etap22 = (props) => {
       <div className="mx-3 pb-2">     
          <div className="d-flex">
            <GoBack />
-           <button type="button" className="btn btn-info m-2" onClick={() => props.history.push("etap-2-1")}>Ймовірності настання ризикових подій, встановлені експертами</button>
+           <button type="button" className="btn btn-info m-2" onClick={() => props.history.push(`${process.env.PUBLIC_URL}/etap-2-1`)}>Ймовірності настання ризикових подій, встановлені експертами</button>
          </div>
           <h3>
             Величина ризиків

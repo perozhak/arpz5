@@ -350,14 +350,14 @@ const App = () => {
   return (
       <Router history={hist}>
         <Switch>
-          <Route exact path="/" component={Dashboard} />
-          <Route exact path="/etap-1" component={etap1} />
-          <Route exact path="/etap-2-1" component={etap21} />
-          <Route exact path="/etap-2-2" component={etap22} />
-          <Route exact path="/etap-3" component={etap3} />
-          <Route exact path="/etap-4-1" component={etap41} />
-          <Route exact path="/etap-4-2" component={etap42} />
-          <Redirect to="/" />
+          <Route exact path={`${process.env.PUBLIC_URL}/`} component={Dashboard} />
+          <Route exact path={`${process.env.PUBLIC_URL}/etap-1`} component={etap1} />
+          <Route exact path={`${process.env.PUBLIC_URL}/etap-2-1`} component={etap21} />
+          <Route exact path={`${process.env.PUBLIC_URL}/etap-2-2`} component={etap22} />
+          <Route exact path={`${process.env.PUBLIC_URL}/etap-3`} component={etap3} />
+          <Route exact path={`${process.env.PUBLIC_URL}/etap-4-1`} component={etap41} />
+          <Route exact path={`${process.env.PUBLIC_URL}/etap-4-2`} component={etap42} />
+          <Redirect to={`${process.env.PUBLIC_URL}/`} />
         </Switch>
       </Router>
   );
